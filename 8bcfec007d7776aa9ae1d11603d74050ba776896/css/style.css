@@ -200,6 +200,12 @@ figure {
     height: auto;
   }
 }
+.fh5co-cover-half{
+  height: 500px;
+  background-position: center;
+  /* Make the background image cover the area of the <div>, and clip the excess */
+  background-size: cover;
+}
 .fh5co-cover.fh5co-hero-2,
 .fh5co-hero.fh5co-hero-2 {
   height: 600px;
@@ -266,6 +272,12 @@ figure {
   }
 }
 .fh5co-cover .desc h2 {
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-weight: 300 !important;
+}
+.fh5co-cover-half .desc h2 {
   color: #fff;
   font-size: 60px;
   margin-bottom: 10px;
