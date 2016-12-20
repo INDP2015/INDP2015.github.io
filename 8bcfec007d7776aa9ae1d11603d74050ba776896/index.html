@@ -42,7 +42,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -69,31 +69,39 @@
 	<![endif]-->
 
 	</head>
+	<style>
+	.mySlides {display:none}
+	.w3-left, .w3-right, .w3-badge {cursor:pointer}
+	.w3-badge {height:13px;width:13px;padding:0}
+	</style>
 	<body>
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(images/titlebg.jpg);">
-				<div class="desc">
-					<div class="container">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="animate-box">
-								<h2>WE ARE INDP 2015.</h2>
-								<p><a class="btn btn-primary btn-lg" href="#start">Get Started</a></p>
+				<div class="fh5co-cover text-center" data-stellar-background-ratio="1.0" style="background-image: url(images/titlebg.jpg);">
+					<div class="desc">
+						<div class="container">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="animate-box">
+									<h2>WE ARE INDP 2015.</h2>
+									<p><a class="btn btn-primary btn-lg" href="#start">Get Started</a></p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-					<h4> We are the eight PhD students at the 2015 class of the International Neuroscience Doctoral Programme in the Champalimaud Foundation.
-						  We created this website as a communication platform between us and everyone else. We intend to share part of our experiences as
-							students and as researchers, providing insight into the type of science we do here and into the challenges we face. </h4>
+						<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
+							<h4> 	We are eight PhD students of the 2015 class of the
+							    	International Neuroscience Doctoral Programme (INDP)
+										at Champalimaud Research. We created this website as a
+										communication platform between us and everyone else.
+										We intend to share our experiences and perspectives as
+										students and as researchers, providing insight into the type
+										of science we do here and into the challenges we face. </h4>
+						</div>
 					</div>
 				</div>
 			</div>
 
-		</div>
-
 		<header id="fh5co-header-section" class="sticky-banner">
-			<div class="container" id="start">
+			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
 					<h1 id="fh5co-logo"><a href="index.html">INDP 2015</a></h1>
@@ -105,9 +113,9 @@
 								<a href="#projects" class="fh5co-sub-ddown">Research</a>
 								<ul class="fh5co-sub-menu">
 									<li><a href="#">PhD Projects</a></li>
-									<li><a href="#">Collaborative Projects</a></li>
 									<li><a href="#">Rotation Projects</a></li>
 									<li><a href="#">Final Semester Projects</a></li>
+									<li><a href="#">Collaborative Projects</a></li>
 								</ul>
 							</li>
 							<li><a href="#pubs">Publications</a></li>
@@ -133,44 +141,82 @@
 		</header>
 
 		<!-- end:header-top -->
-
+		<div id="start"></div>
 		<div id="fh5co-feature-product" class="fh5co-section-gray">
-			<p id="start"></p>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center animate-box">
-						<h1>INDP 2015</h1>
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>The International Neuroscience Doctoral Programme</h3>
+				</div>
+			</div>
+
+			<div class="animate-box" style="width:100%">
+				<div class="w3-content w3-display-container" style="max-width:1920px">
+				  <img class="mySlides" src="images/slide/experiments1.jpg" style="width:100%">
+				  <img class="mySlides" src="images/slide/experiments2.jpg" style="width:100%">
+				  <img class="mySlides" src="images/slide/fun1.jpg" style="width:100%">
+				  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+				    <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				    <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+				    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+				    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+				  </div>
 				</div>
 
-				<div class="row row-bottom-padded-md">
-					<div class="col-md-12 text-center animate-box">
-						<p><img src="images/cover_bg_1.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-rounded"></p>
-					</div>
+				<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
 
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+
+				function currentDiv(n) {
+				  showDivs(slideIndex = n);
+				}
+
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("demo");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+				     x[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				     dots[i].className = dots[i].className.replace(" w3-white", "");
+				  }
+				  x[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " w3-white";
+				}
+				</script>
 				</div>
-				<div class="row row-bottom-padded-md">
+
+				<div class="row row-bottom-padded-md" style="position:relative;top:50px;">
 					<div class="col-md-4">
 						<div class="feature-text">
-							<h3>Angular JS</h3>
+							<h3>Coursework</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="feature-text">
-							<h3>Node JS</h3>
+							<h3>Experimentation</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="feature-text">
-							<h3>Django Python</h3>
+							<h3>Social something something</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-12 text-center">
+				<div class="row" style="position:relative;top:70px;">
+					<div class="text-center">
 						<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo btn btn-primary"><i class="icon-play3"></i> Watch our video</a>
 					</div>
 				</div>
@@ -196,8 +242,8 @@
 							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_2.jpg); ">
 								<a href="#" class="color-3">
 									<div class="case-studies-summary">
-										<span>Creative</span>
-										<h2>Wak in the wooden street</h2>
+										<span></span>
+										<h2>PhD Projects</h2>
 									</div>
 								</a>
 							</li>
@@ -205,8 +251,8 @@
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_3.jpg); ">
 								<a href="#" class="color-4">
 									<div class="case-studies-summary">
-										<span>Design</span>
-										<h2>Present your product</h2>
+										<span>Thinking outside the box</span>
+										<h2>Rotation Projects</h2>
 									</div>
 								</a>
 							</li>
@@ -214,16 +260,16 @@
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_1.jpg); ">
 								<a href="#" class="color-5">
 									<div class="case-studies-summary">
-										<span>Photo</span>
-										<h2>See the horizon</h2>
+										<span></span>
+										<h2>Semester Final Projects</h2>
 									</div>
 								</a>
 							</li>
 							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/blog-1.jpg); ">
 								<a href="#" class="color-6">
 									<div class="case-studies-summary">
-										<span>Love</span>
-										<h2>Spend time with your partner</h2>
+										<span>Fostering collaboration within</span>
+										<h2>Colloborative projects</h2>
 									</div>
 								</a>
 							</li>
@@ -232,7 +278,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-4 col-md-offset-4 text-center animate-box">
+					<div class="col-md-4 col-md-offset-4 text-center animate-box" style="position:relative;top:20px;">
 						<a href="#" class="btn btn-primary btn-lg">See more</a>
 					</div>
 				</div>
@@ -296,7 +342,7 @@
 							</figure>
 							<h5>Basma Husain</h5> <br> <p> Neuroethology Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 
@@ -309,7 +355,7 @@
 							</figure>
 							<h5>Baylor Brangers</h5> <br><p> Neuroethology Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 						</div>
@@ -321,7 +367,7 @@
 							</figure>
 							<h5>Dennis Goldschmidt</h5> <br> <p>Behavior &amp; Metabolism Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 						</div>
 					</div>
@@ -332,7 +378,7 @@
 							</figure>
 							<h5>Marta Iglesias</h5> <br> <p>Collective Behavior Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 						</div>
@@ -348,7 +394,7 @@
 							</figure>
 							<h5>Mauricio Toro</h5> <br> <p>Learning Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 
@@ -361,7 +407,7 @@
 							</figure>
 							<h5>Patrícia Francisco</h5> <br> <p>Behavior &amp; Metabolism Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 						</div>
@@ -373,7 +419,7 @@
 							</figure>
 							<h5>Rodrigo Dias</h5> <br> <p>Cortical Circuits Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 						</div>
@@ -385,7 +431,7 @@
 							</figure>
 							<h5>Severin Berger</h5> <br> <p>Theoretical Neuroscience Lab <br> <span class="text-mute">[PUT 3 KEYWORDS]</span></p>
 							<blockquote>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="thin">Few lines of description here. Maximum 2-3. </p>
 							</blockquote>
 
 						</div>
@@ -456,7 +502,7 @@
 
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 text-center animate-box">
-						<a href="#" class="btn btn-primary btn-lg">Our Blog</a>
+						<a href="blog.html" class="btn btn-primary btn-lg">Our Blog</a>
 					</div>
 				</div>
 
@@ -475,7 +521,7 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2016 Free Html5 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+							<p></p>
 						</div>
 					</div>
 				</div>
