@@ -1,5 +1,7 @@
 table {
-    font-family: "OpenSans", sans-serif;
+    font-family: "Radjhani", sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
     border-collapse:collapse;
     sortable: true;
     width: 100%;
