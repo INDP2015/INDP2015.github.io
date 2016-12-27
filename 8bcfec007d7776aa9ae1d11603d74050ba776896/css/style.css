@@ -129,7 +129,7 @@ a:hover {
 }
 
 p, ul, ol {
-  font-family: 'Kufi', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 1.5em;
   font-size: 16px;
   color: #848484;
@@ -156,11 +156,12 @@ h1 {
   font-family: 'Rajdhani', sans-serif;
   font-size: 32px;
 }
-
-
+h3.about {
+  font-family: 'Raleway', sans-serif;
+}
 h4 {
   color: #fff;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   margin: 0 0 10px 0;
   margin-top: 350px;
@@ -174,6 +175,9 @@ h5 {
   font-size: 20px;
   margin: 0 0 -25px 0;
   margin-top: 0px;
+}
+h2.toptitle {
+  font-family: 'Raleway-Bold', sans-serif;
 }
 
 figure {
