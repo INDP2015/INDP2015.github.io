@@ -6,23 +6,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'myRaleway';
   src: url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'Kufi';
   src: url('https://fonts.googleapis.com/css?family=Reem+Kufi');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Rajdhani';
   src: url('https://fonts.googleapis.com/css?family=Rajdhani');
-  font-weight: normal;
-  font-style: normal;
 }
 
 
@@ -34,7 +28,7 @@
 *
 * ======================================================= */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'myRaleway', sans-serif;
   line-height: 1.6;
   font-size: 16px;
   background: #fff;
@@ -75,7 +69,7 @@ p.bg{
 
 h1, h2, h3, h6 {
   color: #5a5a5a;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'myRaleway', sans-serif;
   font-weight: 300;
   margin: 0 0 0px 0;
 }
@@ -98,7 +92,7 @@ h4 {
 
 h5 {
   color: #5a5a5a;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'myRaleway', sans-serif;
   font-weight: 300;
   font-size: 20px;
   margin: 0 0 -25px 0;
@@ -434,7 +428,7 @@ figure {
 }
 
 #main-logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'myRaleway', sans-serif;
   font-size: 30px;
   color: #fff;
   margin-bottom: 20px;
